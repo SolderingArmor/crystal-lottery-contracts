@@ -1,0 +1,100 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"ownerAddress","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "generateNumbers",
+			"inputs": [
+				{"name":"rows","type":"uint8"},
+				{"name":"columns","type":"uint8"},
+				{"name":"limit","type":"uint8"}
+			],
+			"outputs": [
+				{"name":"numbers","type":"uint64[]"}
+			]
+		},
+		{
+			"name": "callGenerateNumbers",
+			"inputs": [
+				{"name":"_answer_id","type":"uint32"},
+				{"name":"rows","type":"uint8"},
+				{"name":"columns","type":"uint8"},
+				{"name":"limit","type":"uint8"}
+			],
+			"outputs": [
+				{"name":"numbers","type":"uint64[]"}
+			]
+		},
+		{
+			"name": "generateSingle",
+			"inputs": [
+				{"name":"columns","type":"uint8"},
+				{"name":"limit","type":"uint8"}
+			],
+			"outputs": [
+				{"name":"number","type":"uint64"}
+			]
+		},
+		{
+			"name": "callGenerateSingle",
+			"inputs": [
+				{"name":"_answer_id","type":"uint32"},
+				{"name":"columns","type":"uint8"},
+				{"name":"limit","type":"uint8"}
+			],
+			"outputs": [
+				{"name":"number","type":"uint64"}
+			]
+		},
+		{
+			"name": "getOwnerAddress",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"address"}
+			]
+		},
+		{
+			"name": "callOwnerAddress",
+			"inputs": [
+				{"name":"_answer_id","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"address"}
+			]
+		},
+		{
+			"name": "changeOwner",
+			"inputs": [
+				{"name":"newOwnerAddress","type":"address"}
+			],
+			"outputs": [
+				{"name":"oldAddress","type":"address"},
+				{"name":"newAddress","type":"address"}
+			]
+		},
+		{
+			"name": "callChangeOwner",
+			"inputs": [
+				{"name":"_answer_id","type":"uint32"},
+				{"name":"newOwnerAddress","type":"address"}
+			],
+			"outputs": [
+				{"name":"oldAddress","type":"address"},
+				{"name":"newAddress","type":"address"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	]
+}
